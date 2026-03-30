@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bwindi My Home | Gorilla Lodge – Kachulagenyi, Uganda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    Bwindi My Home
+    <span>Kachulagenyi · Uganda</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Stay</a></li>
+    <li><a href="#experience">Gorillas</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#dining">Dining</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking" class="nav-book">Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="close-btn" id="closeNav">✕</div>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#rooms" onclick="closeMobileNav()">Stay</a>
+  <a href="#experience" onclick="closeMobileNav()">Gorillas</a>
+  <a href="#activities" onclick="closeMobileNav()">Activities</a>
+  <a href="#dining" onclick="closeMobileNav()">Dining</a>
+  <a href="#location" onclick="closeMobileNav()">Location</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="#booking" onclick="closeMobileNav()" style="color:var(--gold)">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Bwindi Impenetrable Forest · Uganda</p>
+    <h1 class="hero-title">Your <em>Home</em><br>in the Wild</h1>
+    <p class="hero-sub">Gorilla Lodge · Eco Retreat · Community Stay</p>
+    <div class="hero-ctas">
+      <a href="#booking" class="btn-primary">Reserve Your Stay</a>
+      <a href="#experience" class="btn-outline">Gorilla Trekking</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/467590230.jpg?k=d2851fd0f598076b54628ab64e416b38036606635fcaac69b911d25793b79112&o=" alt="Bwindi My Home lodge exterior" loading="lazy">
+        <div class="about-badge">
+          <strong>8.9</strong>
+          <span>Guest Score</span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">A <em>genuine home</em><br>on the forest edge</h2>
+        <p class="section-body">
+          Nestled in the hills of Kachulagenyi, just minutes from the ancient trees of Bwindi Impenetrable National Park, Bwindi My Home is a recently renovated lodge built for travellers who want authenticity alongside comfort.
+        </p>
+        <p class="section-body" style="margin-top:1rem">
+          With a breathtaking balcony facing the forest, a warm bar, and a garden that comes alive at dawn, this is the base camp for one of Africa's most extraordinary wildlife experiences — mountain gorilla trekking.
+        </p>
+        <div class="about-stats">
+          <div class="stat reveal reveal-delay-1">
+            <strong>#1</strong>
+            <span>in Kachulagenyi</span>
+          </div>
+          <div class="stat reveal reveal-delay-2">
+            <strong>9.7</strong>
+            <span>Location score</span>
+          </div>
+          <div class="stat reveal reveal-delay-3">
+            <strong>8.7</strong>
+            <span>Value for money</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+  <div class="container">
+    <div class="rooms-header reveal">
+      <p class="section-label">Accommodation</p>
+      <h2 class="section-title">Rooms & <em>Suites</em></h2>
+      <p class="section-body">Every room at Bwindi My Home is a private retreat — spacious, sun-drenched, and designed to bring the forest inside. Wake up to birdsong and mountain mist from your own balcony.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card reveal">
+        <img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f?w=1200&q=80" alt="Forest View Suite" loading="lazy">
+        <div class="room-card-info">
+          <p class="room-tag">Signature Room</p>
+          <h3 class="room-name">Forest View Suite</h3>
+          <p class="room-price">From $120 per night · Full Board</p>
+          <a href="#booking" class="room-cta">Book this room →</a>
+        </div>
+      </div>
+      <div class="room-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" alt="Garden Cottage" loading="lazy">
+        <div class="room-card-info">
+          <p class="room-tag">Deluxe Double</p>
+          <h3 class="room-name">Garden Cottage</h3>
+          <p class="room-price">From $90 per night · Full Board</p>
+          <a href="#booking" class="room-cta">Book this room →</a>
+        </div>
+      </div>
+      <div class="room-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Twin Room" loading="lazy">
+        <div class="room-card-info">
+          <p class="room-tag">Standard Twin</p>
+          <h3 class="room-name">Canopy Twin</h3>
+          <p class="room-price">From $75 per night · Full Board</p>
+          <a href="#booking" class="room-cta">Book this room →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="#booking" class="btn-outline">View all rooms & availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- GORILLA EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="experience-grid">
+      <div>
+        <p class="section-label reveal">The Highlight</p>
+        <h2 class="section-title reveal">Mountain <em>Gorilla</em><br>Trekking</h2>
+        <p class="section-body reveal">Bwindi Impenetrable National Park is home to roughly half the world's remaining mountain gorilla population. From our doorstep, venture into the ancient forest for a face-to-face encounter unlike anything on Earth.</p>
+        <div class="experience-features">
+          <div class="feature reveal">
+            <div class="feature-icon">🦍</div>
+            <div class="feature-text">
+              <strong>Multiple gorilla families</strong>
+              <p>Several habituated gorilla families roam the Buhoma and Ruhija sectors — our team helps arrange permits well in advance.</p>
+            </div>
+          </div>
+          <div class="feature reveal reveal-delay-1">
+            <div class="feature-icon">🌿</div>
+            <div class="feature-text">
+              <strong>Expert local guides</strong>
+              <p>Experienced trackers and rangers lead every trek, ensuring your safety and maximum wildlife time.</p>
+            </div>
+          </div>
+          <div class="feature reveal reveal-delay-2">
+            <div class="feature-icon">📍</div>
+            <div class="feature-text">
+              <strong>Prime location</strong>
+              <p>Bwindi My Home sits just minutes from the park gate — no long transfers, more time in the forest.</p>
+            </div>
+          </div>
+          <div class="feature reveal reveal-delay-3">
+            <div class="feature-icon">🎒</div>
+            <div class="feature-text">
+              <strong>Full trek support</strong>
+              <p>Packed lunches, walking poles, gaiters, and rain gear — we prepare you for everything the rainforest has to offer.</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:2.5rem">
+          <a href="#booking" class="btn-primary">Enquire About Permits</a>
+        </div>
+      </div>
+      <div class="experience-visual reveal">
+        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80" alt="Mountain gorilla in Bwindi Forest" loading="lazy">
+        <div class="exp-quote">
+          <p>"Big room, comfortable bed, great balcony — and the view of the forest every morning was stunning."</p>
+          <cite>— Verified Guest, Booking.com</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="activities" id="activities">
+  <div class="container">
+    <div class="activities-header">
+      <p class="section-label reveal">Beyond Gorillas</p>
+      <h2 class="section-title reveal">Forest <em>Experiences</em></h2>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-item reveal">
+        <div class="activity-emoji">🦜</div>
+        <h3>Birding Walks</h3>
+        <p>Bwindi hosts over 350 bird species including 23 Albertine Rift endemics. Dawn and dusk walks with expert birding guides.</p>
+      </div>
+      <div class="activity-item reveal reveal-delay-1">
+        <div class="activity-emoji">🏔️</div>
+        <h3>Waterfall Hikes</h3>
+        <p>Jungle trails weave past cascading waterfalls and ancient trees — a meditative escape into one of Africa's oldest forests.</p>
+      </div>
+      <div class="activity-item reveal reveal-delay-2">
+        <div class="activity-emoji">🏘️</div>
+        <h3>Batwa Culture Tour</h3>
+        <p>Meet the indigenous Batwa people, learn their forest traditions, and gain a profound perspective on life in the rainforest.</p>
+      </div>
+      <div class="activity-item reveal reveal-delay-3">
+        <div class="activity-emoji">🌄</div>
+        <h3>Sunrise Viewpoints</h3>
+        <p>Wake before dawn and hike to panoramic ridges where mist rolls through the valley as the forest stirs to life below.</p>
+      </div>
+      <div class="activity-item reveal">
+        <div class="activity-emoji">🐒</div>
+        <h3>Chimpanzee Tracking</h3>
+        <p>Bwindi is also home to chimpanzees and red-tailed monkeys — days in the forest rarely disappoint wildlife lovers.</p>
+      </div>
+      <div class="activity-item reveal reveal-delay-1">
+        <div class="activity-emoji">🌿</div>
+        <h3>Community Walks</h3>
+        <p>Stroll through Buhoma village, visit local schools, and experience the warm hospitality of Ugandan highland communities.</p>
+      </div>
+      <div class="activity-item reveal reveal-delay-2">
+        <div class="activity-emoji">📸</div>
+        <h3>Photography</h3>
+        <p>Golden hour light over the forest canopy, rare birds, charismatic primates — every moment is a frame worth capturing.</p>
+      </div>
+      <div class="activity-item reveal reveal-delay-3">
+        <div class="activity-emoji">☕</div>
+        <h3>Garden Relaxation</h3>
+        <p>Linger over Ugandan coffee in our garden bar, let the forest soundtrack wash over you, and simply breathe it all in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="dining" id="dining">
+  <div class="dining-grid">
+    <div class="dining-image">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/467592242.jpg?k=bd6c4f41ecc5b17697de3312a8ebc2734fcd9abc0c5b4eb638985598b0467db9&o=" alt="Fresh Ugandan cuisine" loading="lazy">
+    </div>
+    <div class="dining-content">
+      <p class="section-label reveal">Restaurant & Bar</p>
+      <h2 class="section-title reveal">Fresh, <em>wholesome</em><br>Ugandan flavours</h2>
+      <p class="section-body reveal" style="max-width:100%">
+        Our kitchen blends local Ugandan produce with comforting Western touches — nourishing food to fuel adventurous days and round off magical evenings. Full board is included in all room rates.
+      </p>
+      <div class="dining-menu reveal">
+        <div class="menu-line">
+          <span>Ugandan Breakfast Platter</span>
+          <strong>Included</strong>
+        </div>
+        <div class="menu-line">
+          <span>Forest Packed Lunch</span>
+          <strong>On request</strong>
+        </div>
+        <div class="menu-line">
+          <span>3-Course Dinner</span>
+          <strong>Included</strong>
+        </div>
+        <div class="menu-line">
+          <span>Local Craft Beers & Wines</span>
+          <strong>Bar menu</strong>
+        </div>
+        <div class="menu-line">
+          <span>Vegetarian & dietary options</span>
+          <strong>Available</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <p class="section-label reveal">Guest Reviews</p>
+      <h2 class="section-title reveal">What Our <em>Guests</em> Say</h2>
+      <div class="reviews-rating reveal">
+        <div class="rating-num">8.9</div>
+        <div class="rating-detail">
+          <div class="stars">★★★★★</div>
+          <p>Guests' Choice · Booking.com</p>
+          <p style="margin-top:.2rem">Based on 17 verified reviews</p>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The view from my room was stunning — a gorgeous balcony facing the forest where I took my coffee every morning. The room was airy and bright with natural light. Excellent value; I will definitely be recommending Bwindi My Home."</p>
+        <p class="reviewer"><strong>Sarah M.</strong> · United Kingdom</p>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Big room, comfortable bed, great balcony. The ensuite bathroom had hot water and the windows and doors were well sealed — not a single mosquito! No wifi, but that just made for a perfectly peaceful holiday off the grid."</p>
+        <p class="reviewer"><strong>Markus V.</strong> · Germany</p>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"We stayed two nights with our family. Everything was fine — good staff, nice big rooms, full board, nice location, fair price. We even visited the nearby hospital. Definitely recommend for anyone coming to trek gorillas."</p>
+        <p class="reviewer"><strong>Famille Dubois</strong> · Belgium</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="booking-info reveal">
+        <p class="section-label">Reservations</p>
+        <h2>Plan your <em>perfect stay</em></h2>
+        <p>Use the form to send us your dates and preferences. We'll confirm availability, assist with gorilla trekking permits, and arrange everything you need for an unforgettable visit to Bwindi.</p>
+        <div class="booking-extras">
+          <div class="booking-extra">Full board included in all room rates</div>
+          <div class="booking-extra">Gorilla permit assistance</div>
+          <div class="booking-extra">Airport & airstrip transfers available</div>
+          <div class="booking-extra">Free private parking on site</div>
+          <div class="booking-extra">Garden bar & campfire evenings</div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <form class="booking-form" onsubmit="handleBooking(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Check-in Date</label>
+              <input type="date" id="checkin" required>
+            </div>
+            <div class="form-group">
+              <label>Check-out Date</label>
+              <input type="date" id="checkout" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Guests</label>
+              <select id="guests">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5+ Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Room Type</label>
+              <select id="roomtype">
+                <option>Forest View Suite</option>
+                <option>Garden Cottage</option>
+                <option>Canopy Twin</option>
+                <option>Best Available</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Special Requests</label>
+            <input type="text" placeholder="Gorilla permits, dietary needs, transfers…">
+          </div>
+          <button type="submit" class="btn-book">Send Booking Request →</button>
+        </form>
+        <div id="bookingSuccess" style="display:none; text-align:center; padding:2rem; color:var(--sage);">
+          <div style="font-size:2rem; margin-bottom:.8rem;">✓</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--cream);">Request received!</p>
+          <p style="font-size:.82rem; margin-top:.5rem;">We'll be in touch within 24 hours to confirm your stay.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <p class="section-label">Gallery</p>
+      <h2 class="section-title">Life at <em>Bwindi</em></h2>
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=1000&q=80" alt="Mountain gorilla" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Forest sunrise" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?w=600&q=80" alt="Uganda landscape" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1000&q=80" alt="Gorilla encounter" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&q=80" alt="Lodge room" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=600&q=80" alt="Bwindi forest canopy" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="location-grid">
+      <div>
+        <p class="section-label reveal">How to Find Us</p>
+        <h2 class="section-title reveal">Getting to <em>Bwindi</em></h2>
+        <p class="section-body reveal">We're located at Nyamishamba Bwindi, Kachulagenyi — on the western edge of Bwindi Impenetrable National Park. Our team can arrange transfers from Kihihi Airstrip or Entebbe.</p>
+        <div class="location-details">
+          <div class="location-item reveal">
+            <div class="loc-icon">✈️</div>
+            <div class="loc-text">
+              <strong>By Air</strong>
+              <p>Kihihi Airstrip — 40 km (approx. 1.5 hrs by road). Charter flights from Entebbe available. We arrange paid airport transfers.</p>
+            </div>
+          </div>
+          <div class="location-item reveal reveal-delay-1">
+            <div class="loc-icon">🚗</div>
+            <div class="loc-text">
+              <strong>By Road</strong>
+              <p>8–9 hours from Kampala / Entebbe via Mbarara. 6 hours from Queen Elizabeth NP. Private transfers and self-drive both possible.</p>
+            </div>
+          </div>
+          <div class="location-item reveal reveal-delay-2">
+            <div class="loc-icon">📍</div>
+            <div class="loc-text">
+              <strong>Address</strong>
+              <p>Nyamishamba Bwindi, Kachulagenyi, Kanungu District, Western Uganda</p>
+            </div>
+          </div>
+          <div class="location-item reveal reveal-delay-3">
+            <div class="loc-icon">🕐</div>
+            <div class="loc-text">
+              <strong>Check-in / Check-out</strong>
+              <p>Check-in from 14:00 · Check-out by 11:00<br>Early arrival and late check-out on request</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-embed reveal reveal-delay-1">
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=29.5,−1.2,29.8,−0.9&layer=mapnik&marker=−1.05,29.65"
+            title="Map of Bwindi Impenetrable National Park"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label reveal">Get In Touch</p>
+        <h2 class="section-title reveal">We'd love to <em>hear from you</em></h2>
+        <p class="section-body reveal">Whether you have questions about gorilla permits, need help planning your itinerary, or want to make a special request — our team is here to help.</p>
+        <div class="contact-channels reveal">
+          <div class="channel">
+            <div class="channel-icon">📧</div>
+            <div class="channel-text">
+              <strong>Email</strong>
+              <a href="/cdn-cgi/l/email-protection#0c65626a634c6e7b65626865617564636169226f6361"><span class="__cf_email__" data-cfemail="4b22252d240b293c22252f2226322324262e65282426">[email&#160;protected]</span></a>
+            </div>
+          </div>
+          <div class="channel">
+            <div class="channel-icon">📞</div>
+            <div class="channel-text">
+              <strong>Phone / WhatsApp</strong>
+              <a href="tel:+256000000000">+256 700 000 000</a>
+            </div>
+          </div>
+          <div class="channel">
+            <div class="channel-icon">📍</div>
+            <div class="channel-text">
+              <strong>Location</strong>
+              <a href="https://maps.google.com/?q=Bwindi+Impenetrable+National+Park" target="_blank">Kachulagenyi, Western Uganda</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Family name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option>Booking enquiry</option>
+              <option>Gorilla permit help</option>
+              <option>Transfer arrangements</option>
+              <option>General question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us about your travel plans, dates, group size…" required></textarea>
+          </div>
+          <button type="submit" class="btn-book">Send Message →</button>
+        </form>
+        <div id="contactSuccess" style="display:none; text-align:center; padding:2rem; color:var(--sage);">
+          <div style="font-size:2rem; margin-bottom:.8rem;">✓</div>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--cream);">Message sent!</p>
+          <p style="font-size:.82rem; margin-top:.5rem;">Thank you for reaching out. We'll reply within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          Bwindi My Home
+          <span>Kachulagenyi · Uganda</span>
+        </a>
+        <p>A warm, authentic lodge on the edge of Bwindi Impenetrable Forest — your gateway to mountain gorillas and the living heart of Africa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">◻</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">✆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Stay</h4>
+        <ul>
+          <li><a href="#rooms">Forest View Suite</a></li>
+          <li><a href="#rooms">Garden Cottage</a></li>
+          <li><a href="#rooms">Canopy Twin</a></li>
+          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#booking">Prices</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#experience">Gorilla Trekking</a></li>
+          <li><a href="#activities">Birding</a></li>
+          <li><a href="#activities">Waterfall Hikes</a></li>
+          <li><a href="#activities">Batwa Culture</a></li>
+          <li><a href="#dining">Dining</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#location">Location & Map</a></li>
+          <li><a href="#location">Getting Here</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bwindi My Home · Kachulagenyi, Uganda · All rights reserved</p>
+      <p>Website designed with ♥ for the Bwindi community</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>
