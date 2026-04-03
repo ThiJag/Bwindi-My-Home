@@ -13,12 +13,19 @@ window.addEventListener('scroll', () => {
 // ─── MOBILE MENU ────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
+
 hamburger.addEventListener('click', () => {
-  mobileNav.classList.add('open');
-  hamburger.classList.add('open');
+  const isOpen = mobileNav.classList.contains('open');
+  if (isOpen) {
+    mobileNav.classList.remove('open');
+    hamburger.classList.remove('open');
+  } else {
+    mobileNav.classList.add('open');
+    hamburger.classList.add('open');
+  }
 });
 
-function closeMobileNav() { 
+function closeMobileNav() {
   mobileNav.classList.remove('open');
   hamburger.classList.remove('open');
 }
