@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap");
 
 
-  :root {
+:root {
     --forest:    #1a2e1f;
     --moss:      #2d4a2f;
     --fern:      #4a7c50;
@@ -16,7 +16,17 @@
     --white:     #ffffff;
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  *, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+    max-width: 100%;
+  }
 
   html { scroll-behavior: smooth; font-size: 16px; }
 
@@ -638,4 +648,29 @@
 .instagram-btn:hover {
   opacity: .85;
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .instagram-btn {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .footer-instagram {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dining-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-inner {
+    grid-template-columns: 1fr;
+  }
 }
