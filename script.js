@@ -13,16 +13,11 @@ window.addEventListener('scroll', () => {
 // ─── MOBILE MENU ────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
-const closeNav  = document.getElementById('closeNav');
 hamburger.addEventListener('click', () => {
   mobileNav.classList.add('open');
   hamburger.classList.add('open');
 });
 
-closeNav.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  hamburger.classList.remove('open');
-});
 function closeMobileNav() { 
   mobileNav.classList.remove('open');
   hamburger.classList.remove('open');
