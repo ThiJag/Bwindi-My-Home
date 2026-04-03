@@ -191,32 +191,31 @@
   .rooms { background: var(--charcoal); }
   .rooms-header { text-align: center; margin-bottom: 3.5rem; }
   .rooms-header .section-body { margin: 0 auto; }
-  .rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; }
+
+  .rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
   .room-card {
-    position: relative; overflow: hidden; aspect-ratio: 3/4; cursor: pointer;
-    background: var(--moss);
+    display: flex;
+    flex-direction: column;
+    background: var(--forest);
+    border-radius: 2px;
+    overflow: hidden;
   }
-  .room-card:first-child { grid-column: span 2; aspect-ratio: 16/9; }
-  .room-card img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform .6s ease;
-  }
-  .room-card:hover img { transform: scale(1.06); }
-  .room-card-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(26,46,31,.92) 0%, transparent 55%);
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 2rem;
-    opacity: 0; transition: opacity .3s;
-  }
-  .room-card:hover .room-card-overlay { opacity: 1; }
+
   .room-card-info {
-    position: absolute; bottom: 0; left: 0; right: 0; padding: 1.8rem 2rem;
-    background: linear-gradient(to top, rgba(26,46,31,.95) 0%, transparent 100%);
+    padding: 1.5rem 1.8rem 1.2rem;
+    background: var(--forest);
   }
-  .room-tag { font-size: .6rem; letter-spacing: .35em; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem; }
+  .room-tag {
+    font-size: .6rem; letter-spacing: .35em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .4rem;
+  }
   .room-name {
-    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.5rem; font-weight: 300; color: var(--white); margin-bottom: .3rem;
   }
   .room-price { font-size: .78rem; color: var(--sage); letter-spacing: .1em; }
@@ -224,10 +223,51 @@
     display: inline-block; margin-top: .8rem;
     font-size: .65rem; letter-spacing: .25em; text-transform: uppercase;
     color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold);
-    padding-bottom: 2px; opacity: 0; transform: translateY(6px);
-    transition: opacity .3s .1s, transform .3s .1s;
+    padding-bottom: 2px; transition: opacity .2s;
   }
-  .room-card:hover .room-cta { opacity: 1; transform: translateY(0); }
+  .room-cta:hover { opacity: .7; }
+
+  .room-slider {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-height: 280px;
+  }
+  .room-slides {
+    display: flex;
+    height: 100%;
+    transition: transform .4s ease;
+  }
+  .room-slides img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(26,46,31,.75); color: var(--cream);
+    border: none; cursor: pointer;
+    width: 36px; height: 36px; border-radius: 50%;
+    font-size: 1rem; display: flex; align-items: center; justify-content: center;
+    z-index: 2; opacity: 0; transition: opacity .2s;
+  }
+  .room-slider:hover .slide-btn { opacity: 1; }
+  .slide-btn:hover { background: rgba(26,46,31,.95); }
+  .slide-btn.prev { left: .6rem; }
+  .slide-btn.next { right: .6rem; }
+
+  .slide-dots {
+    position: absolute; bottom: .7rem; left: 50%; transform: translateX(-50%);
+    display: flex; gap: .4rem;
+  }
+  .slide-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: rgba(255,255,255,.4); cursor: pointer;
+    transition: background .2s;
+  }
+  .slide-dot.active { background: var(--gold); }
 
   /* ─── GORILLA EXPERIENCE ────────────────────────── */
   .experience {
@@ -485,4 +525,15 @@
     .booking-inner { padding: 2.5rem 1.5rem; }
     .footer-bottom { flex-direction: column; gap: .8rem; text-align: center; }
   }
-  
+  .booking-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color .2s, font-weight .2s;
+}
+
+.booking-link:hover {
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: underline;
+}

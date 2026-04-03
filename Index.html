@@ -107,36 +107,62 @@
       <p class="section-body">Every room at Bwindi My Home is a private retreat — spacious, sun-drenched, and designed to bring the forest inside. Wake up to birdsong and mountain mist from your own balcony.</p>
     </div>
     <div class="rooms-grid">
+
+      <!-- ROOM 1 -->
       <div class="room-card reveal">
-        <img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f?w=1200&q=80" alt="Forest View Suite" loading="lazy">
         <div class="room-card-info">
-          <p class="room-tag">Signature Room</p>
-          <h3 class="room-name">Forest View Suite</h3>
-          <p class="room-price">From $120 per night · Full Board</p>
-          <a href="#booking" class="room-cta">Book this room →</a>
+          <p class="room-tag">Mountain View</p>
+          <h3 class="room-name">Double Room with 1 bed</h3>
+        </div>
+        <div class="room-slider">
+          <div class="room-slides">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/504880733.jpg?k=b7484db9b54651724b4a0563981ad185e8570bc64da5a0bf989eb2c1674cce2b&amp" alt="Mountain View 1 one bed" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Mountain View 2 one bed" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80" alt="Mountain View 3 one bed" loading="lazy">
+          </div>
+          <button class="slide-btn prev" onclick="slideRoom(this, -1)">&#8592;</button>
+          <button class="slide-btn next" onclick="slideRoom(this, 1)">&#8594;</button>
+          <div class="slide-dots"></div>
         </div>
       </div>
+
+      <!-- ROOM 2 -->
       <div class="room-card reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&q=80" alt="Garden Cottage" loading="lazy">
         <div class="room-card-info">
-          <p class="room-tag">Deluxe Double</p>
-          <h3 class="room-name">Garden Cottage</h3>
-          <p class="room-price">From $90 per night · Full Board</p>
-          <a href="#booking" class="room-cta">Book this room →</a>
+          <p class="room-tag">Mountain View</p>
+          <h3 class="room-name">Double Room with 2 beds</h3>
+        </div>
+        <div class="room-slider">
+          <div class="room-slides">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/504881208.jpg?k=81c15966813f517e18c17ef97082c25d9e49093853096079898ffecff56988b2&amp" alt="Mountain View 1 Two Beds" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?w=800&q=80" alt="Mountain View 1 Two Beds" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&q=80" alt="Mountain View 1 Two Beds" loading="lazy">
+          </div>
+          <button class="slide-btn prev" onclick="slideRoom(this, -1)">&#8592;</button>
+          <button class="slide-btn next" onclick="slideRoom(this, 1)">&#8594;</button>
+          <div class="slide-dots"></div>
         </div>
       </div>
+
+      <!-- ROOM 3 -->
       <div class="room-card reveal reveal-delay-2">
-        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80" alt="Twin Room" loading="lazy">
         <div class="room-card-info">
-          <p class="room-tag">Standard Twin</p>
-          <h3 class="room-name">Canopy Twin</h3>
-          <p class="room-price">From $75 per night · Full Board</p>
-          <a href="#booking" class="room-cta">Book this room →</a>
+          <p class="room-tag">Forrest View</p>
+          <h3 class="room-name">Family Room with multiple beds</h3>
+        </div>
+        <div class="room-slider">
+          <div class="room-slides">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/467590235.jpg?k=73e87ce67b6845d656fc8e6952ff425602362f0d5ff8f3080acddadfe0d07b94&amp" alt="Forrest View 1" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80" alt="Forrest View 1" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Forrest View 1" loading="lazy">
+          </div>
+          <button class="slide-btn prev" onclick="slideRoom(this, -1)">&#8592;</button>
+          <button class="slide-btn next" onclick="slideRoom(this, 1)">&#8594;</button>
+          <div class="slide-dots"></div>
         </div>
       </div>
+
     </div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="#booking" class="btn-outline">View all rooms & availability</a>
     </div>
   </div>
 </section>
@@ -256,7 +282,7 @@
       <p class="section-label reveal">Restaurant & Bar</p>
       <h2 class="section-title reveal">Fresh, <em>wholesome</em><br>Ugandan flavours</h2>
       <p class="section-body reveal" style="max-width:100%">
-        Our kitchen blends local Ugandan produce with comforting Western touches — nourishing food to fuel adventurous days and round off magical evenings. Full board is included in all room rates.
+        Our kitchen blends local Ugandan produce with comforting Western touches — nourishing food to fuel adventurous days and round off magical evenings. Breakfast is included in all room rates.
       </p>
       <div class="dining-menu reveal">
         <div class="menu-line">
@@ -328,12 +354,14 @@
         <h2>Plan your <em>perfect stay</em></h2>
         <p>Use the form to send us your dates and preferences. We'll confirm availability, assist with gorilla trekking permits, and arrange everything you need for an unforgettable visit to Bwindi.</p>
         <div class="booking-extras">
-          <div class="booking-extra">Full board included in all room rates</div>
+          <div class="booking-extra">Breakfast included in all room rates</div>
           <div class="booking-extra">Gorilla permit assistance</div>
           <div class="booking-extra">Airport & airstrip transfers available</div>
           <div class="booking-extra">Free private parking on site</div>
           <div class="booking-extra">Garden bar & campfire evenings</div>
         </div>
+        <p>Fill in the form for a request or book directly on <a href="https://www.booking.com/hotel/ug/bwindi-my-home" target="_blank" class="booking-link">Booking.com</a></p>
+
       </div>
       <div class="reveal reveal-delay-1">
         <form class="booking-form" onsubmit="handleBooking(event)">

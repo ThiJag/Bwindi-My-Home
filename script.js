@@ -57,4 +57,40 @@
       window.scrollTo({ top: y, behavior: 'smooth' });
     });
   });
-  
+
+  // ─── ROOM SLIDERS ───────────────────────────────
+  function initSliders() {
+    document.querySelectorAll('.room-slider').forEach(slider => {
+      const slides = slider.querySelector('.room-slides');
+      const imgs = slides.querySelectorAll('img');
+      const dotsContainer = slider.querySelector('.slide-dots');
+      let current = 0;
+
+      imgs.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      function goTo(index) {
+        current = (index + imgs.length) % imgs.length;
+        slides.style.transform = `translateX(-${current * 100}%)`;
+        dotsContainer.querySelectorAll('.slide-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      slider.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
+      slider.querySelector('.next').addEventListener('click', () => goTo(current + 1));
+
+      let startX = 0;
+      slides.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+      slides.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+      });
+    });
+  }
+
+  initSliders();
