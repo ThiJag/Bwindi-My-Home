@@ -556,7 +556,7 @@
     .booking-inner { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-rows: 200px 200px; }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     nav { padding: 1rem 1.5rem; }
     nav.scrolled { padding: .7rem 1.5rem; }
     .nav-links { display: none; }
