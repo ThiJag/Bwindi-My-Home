@@ -674,3 +674,50 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ─── OVERFLOW FIX MOBIEL ────────────────────── */
+.room-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.room-slides {
+  width: 100%;
+}
+
+.room-slides img {
+  width: 100%;
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.hero-bg {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .exp-quote {
+    left: 0;
+    right: 0;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-grid,
+  .experience-grid,
+  .dining-grid,
+  .location-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
