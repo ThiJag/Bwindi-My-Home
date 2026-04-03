@@ -1,6 +1,9 @@
 // ─── EMAILJS INIT ────────────────────────────────
 emailjs.init('x9FsMiWX5CmgK1QHN');
 
+// ─── RECAPTCHA SITE KEY ──────────────────────────
+const SITE_KEY = '6LeASqUsAAAAAHrsoNvT_93vz3xdl3QckMp-thcy';
+
 // ─── NAV SCROLL ─────────────────────────────────
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
