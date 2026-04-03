@@ -14,35 +14,40 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 
-hamburger.addEventListener('click', () => {
-  const isOpen = mobileNav.classList.contains('open');
-  if (isOpen) {
-    mobileNav.classList.remove('open');
-    hamburger.classList.remove('open');
-  } else {
-    mobileNav.classList.add('open');
-    hamburger.classList.add('open');
-  }
-});
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.contains('open');
+    if (isOpen) {
+      mobileNav.classList.remove('open');
+      hamburger.classList.remove('open');
+    } else {
+      mobileNav.classList.add('open');
+      hamburger.classList.add('open');
+    }
+  });
+}
 
 function closeMobileNav() {
-  mobileNav.classList.remove('open');
-  hamburger.classList.remove('open');
+  if (mobileNav) mobileNav.classList.remove('open');
+  if (hamburger) hamburger.classList.remove('open');
 }
 
 // ─── SCROLL REVEAL ──────────────────────────────
 const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-revealEls.forEach(el => observer.observe(el));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+} else {
+  revealEls.forEach(el => el.classList.add('visible'));
+}
 
 // ─── BOOKING FORM ───────────────────────────────
 function handleBooking(e) {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
-
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
@@ -64,7 +69,6 @@ function handleContact(e) {
   e.preventDefault();
   const form = e.target;
   const btn = form.querySelector('button[type="submit"]');
-
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
@@ -84,12 +88,12 @@ function handleContact(e) {
 // ─── DATE DEFAULTS ──────────────────────────────
 const today = new Date();
 const tomorrow = new Date(today); tomorrow.setDate(tomorrow.getDate() + 1);
-const after    = new Date(today); after.setDate(after.getDate() + 3);
+const after = new Date(today); after.setDate(after.getDate() + 3);
 const fmt = d => d.toISOString().split('T')[0];
 const ci = document.getElementById('checkin');
 const co = document.getElementById('checkout');
 if (ci) { ci.value = fmt(tomorrow); ci.min = fmt(tomorrow); }
-if (co) { co.value = fmt(after);    co.min = fmt(after); }
+if (co) { co.value = fmt(after); co.min = fmt(after); }
 if (ci) ci.addEventListener('change', () => {
   const sel = new Date(ci.value); sel.setDate(sel.getDate() + 2);
   co.min = ci.value; if (co.value <= ci.value) co.value = fmt(sel);
