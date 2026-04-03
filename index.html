@@ -360,6 +360,7 @@
           <div class="booking-extra">Free private parking on site</div>
           <div class="booking-extra">Garden bar & campfire evenings</div>
         </div>
+        <p></p>
         <p>Fill in the form for a request or book directly on <a href="https://www.booking.com/hotel/ug/bwindi-my-home" target="_blank" class="booking-link">Booking.com</a></p>
 
       </div>
@@ -368,17 +369,18 @@
           <div class="form-row">
             <div class="form-group">
               <label>Check-in Date</label>
-              <input type="date" id="checkin" required>
+              <input type="date" id="checkin" name="checkin" required>
             </div>
             <div class="form-group">
               <label>Check-out Date</label>
-              <input type="date" id="checkout" required>
+              <input type="date" id="checkout" name="checkout" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Guests</label>
-              <select id="guests">
+              <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
                 <option>1 Guest</option>
                 <option>2 Guests</option>
                 <option>3 Guests</option>
@@ -388,32 +390,32 @@
             </div>
             <div class="form-group">
               <label>Room Type</label>
-              <select id="roomtype">
-                <option>Forest View Suite</option>
-                <option>Garden Cottage</option>
-                <option>Canopy Twin</option>
-                <option>Best Available</option>
+              <select id="roomtype" name="roomtype" required>
+                <option value="">Select a room type</option>
+                <option>Double Room</option>
+                <option>Family Room</option>
+                <option>Best fit for our number of guests</option>
               </select>
             </div>
           </div>
           <div class="form-group">
             <label>Your Name</label>
-            <input type="text" placeholder="Full name" required>
+            <input type="text" name="full_name" placeholder="Full name" required>
           </div>
           <div class="form-group">
             <label>Email Address</label>
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" name="from_email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label>Special Requests</label>
-            <input type="text" placeholder="Gorilla permits, dietary needs, transfers…">
+            <input type="text" name="special_requests" placeholder="Gorilla permits, dietary needs, transfers…">
           </div>
           <button type="submit" class="btn-book">Send Booking Request →</button>
         </form>
         <div id="bookingSuccess" style="display:none; text-align:center; padding:2rem; color:var(--sage);">
           <div style="font-size:2rem; margin-bottom:.8rem;">✓</div>
           <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--cream);">Request received!</p>
-          <p style="font-size:.82rem; margin-top:.5rem;">We'll be in touch within 24 hours to confirm your stay.</p>
+          <p style="font-size:.82rem; margin-top:.5rem;">We'll be in touch as soon as possible to confirm your stay.</p>
         </div>
       </div>
     </div>
@@ -539,20 +541,21 @@
           <div class="form-row">
             <div class="form-group">
               <label>First Name</label>
-              <input type="text" placeholder="Your name" required>
+              <input type="text" name="first_name" placeholder="Your name" required>
             </div>
             <div class="form-group">
               <label>Last Name</label>
-              <input type="text" placeholder="Family name" required>
+              <input type="text" name="last_name" placeholder="Family name" required>
             </div>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" name="from_email" placeholder="your@email.com" required>
           </div>
           <div class="form-group">
             <label>Subject</label>
-            <select>
+            <select name="subject" required>
+              <option value="">Select a subject</option>
               <option>Booking enquiry</option>
               <option>Gorilla permit help</option>
               <option>Transfer arrangements</option>
@@ -561,14 +564,14 @@
           </div>
           <div class="form-group">
             <label>Message</label>
-            <textarea placeholder="Tell us about your travel plans, dates, group size…" required></textarea>
+            <textarea name="message" placeholder="Tell us about your travel plans, dates, group size…" required></textarea>
           </div>
           <button type="submit" class="btn-book">Send Message →</button>
         </form>
         <div id="contactSuccess" style="display:none; text-align:center; padding:2rem; color:var(--sage);">
           <div style="font-size:2rem; margin-bottom:.8rem;">✓</div>
           <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:var(--cream);">Message sent!</p>
-          <p style="font-size:.82rem; margin-top:.5rem;">Thank you for reaching out. We'll reply within 24 hours.</p>
+          <p style="font-size:.82rem; margin-top:.5rem;">Thank you for reaching out. We'll reply as soon as possible.</p>
         </div>
       </div>
     </div>
@@ -629,7 +632,7 @@
   </div>
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js" defer></script>
 </body>
 </html>

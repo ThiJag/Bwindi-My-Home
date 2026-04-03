@@ -526,14 +526,12 @@
     .footer-bottom { flex-direction: column; gap: .8rem; text-align: center; }
   }
   .booking-link {
-  color: inherit;
-  text-decoration: none;
-  font-weight: normal;
-  transition: color .2s, font-weight .2s;
-}
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+    transition: text-decoration .2s;
+  }
 
-.booking-link:hover {
-  color: #0066cc;
-  font-weight: bold;
-  text-decoration: underline;
-}
+  .booking-link:hover {
+    text-decoration: underline;
+  }
