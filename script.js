@@ -14,9 +14,19 @@ window.addEventListener('scroll', () => {
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 const closeNav  = document.getElementById('closeNav');
-hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
-closeNav.addEventListener('click', () => mobileNav.classList.remove('open'));
-function closeMobileNav() { mobileNav.classList.remove('open'); }
+hamburger.addEventListener('click', () => {
+  mobileNav.classList.add('open');
+  hamburger.classList.add('open');
+});
+
+closeNav.addEventListener('click', () => {
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('open');
+});
+function closeMobileNav() { 
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('open');
+}
 
 // ─── SCROLL REVEAL ──────────────────────────────
 const revealEls = document.querySelectorAll('.reveal');

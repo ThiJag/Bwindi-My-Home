@@ -80,8 +80,36 @@
     transition: background .2s !important;
   }
   .nav-book:hover { background: var(--gold) !important; }
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-  .hamburger span { width: 26px; height: 1.5px; background: var(--cream); transition: .3s; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ham-line {
+    width: 26px;
+    height: 1.5px;
+    background: var(--cream);
+    transition: .3s;
+    display: block;
+  }
+
+  .ham-close {
+    display: none;
+    position: absolute;
+    font-size: 1.3rem;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  .hamburger.open .ham-line { display: none; }
+  .hamburger.open .ham-close { display: block; }
 
   /* ─── HERO ───────────────────────────────────────── */
   .hero {
