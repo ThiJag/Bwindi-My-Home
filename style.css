@@ -44,72 +44,150 @@
 
   /* ─── NAV ────────────────────────────────────────── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.2rem 3rem;
-    background: transparent;
-    transition: background .4s, padding .4s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Houdt logo en knop aan de zijkanten */
+  padding: 1.2rem 3rem;
+  background: transparent;
+  transition: background 0.4s, padding 0.4s;
+}
+
+nav.scrolled {
+  background: rgba(26, 46, 31, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 0.8rem 3rem;
+  border-bottom: 1px solid rgba(74, 124, 80, 0.3);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--cream);
+  text-decoration: none;
+  line-height: 1.1;
+  /* Flex-basis zorgt ervoor dat het logo zijn eigen breedte behoudt */
+  flex-basis: auto;
+}
+
+.nav-logo span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--sage);
+  font-weight: 400;
+  font-family: 'Jost', 'Segoe UI', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  align-items: center;
+  /* Belangrijk voor centrering: laat de links de beschikbare ruimte innemen */
+  flex: 1;
+  justify-content: center; /* Centraliseert de links binnen de beschikbare ruimte */
+  margin: 0 2rem; /* Voegt wat ruimte toe aan de zijkanten */
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+  white-space: nowrap; /* Voorkomt dat links op twee regels breken */
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* Styling voor de losse Book Now knop */
+.nav-book {
+  background: var(--ochre);
+  color: var(--white) !important;
+  padding: 0.55rem 1.4rem;
+  border-radius: 1px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+  transition: background 0.2s !important;
+  display: inline-block; /* Zorgt ervoor dat padding goed werkt */
+  white-space: nowrap;
+  /* Flex-basis zorgt ervoor dat de knop zijn eigen breedte behoudt */
+  flex-basis: auto;
+}
+
+.nav-book:hover {
+  background: var(--gold) !important;
+}
+
+/* Hamburger Menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ham-line {
+  width: 26px;
+  height: 1.5px;
+  background: var(--cream);
+  transition: 0.3s;
+  display: block;
+}
+
+.ham-close {
+  display: none;
+  position: absolute;
+  font-size: 1.3rem;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.hamburger.open .ham-line {
+  display: none;
+}
+
+.hamburger.open .ham-close {
+  display: block;
+}
+
+/* Zorg ervoor dat op kleinere schermen de 'Book Now' knop ook in het hamburger menu komt (optioneel, afhankelijk van je JS) */
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    display: none; /* Verbergt de links op mobiel (dit wordt waarschijnlijk door je JS afgehandeld) */
   }
-  nav.scrolled {
-    background: rgba(26,46,31,.95);
-    backdrop-filter: blur(12px);
-    padding: .8rem 3rem;
-    border-bottom: 1px solid rgba(74,124,80,.3);
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: .12em;
-    color: var(--cream);
-    text-decoration: none;
-    line-height: 1.1;
-  }
-  .nav-logo span { display: block; font-size: .65rem; letter-spacing: .3em; color: var(--sage); font-weight: 400; font-family: 'Jost', 'Segoe UI', Helvetica, Arial, sans-serif; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-  .nav-links a {
-    color: var(--cream); text-decoration: none;
-    font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 400;
-    opacity: .85; transition: opacity .2s, color .2s;
-  }
-  .nav-links a:hover { opacity: 1; color: var(--gold); }
+
   .nav-book {
-    background: var(--ochre); color: var(--white) !important;
-    padding: .55rem 1.4rem; border-radius: 1px;
-    opacity: 1 !important; font-weight: 500 !important;
-    transition: background .2s !important;
+    display: none; /* Verbergt de losse knop op mobiel als je deze in het hamburger menu wilt */
   }
-  .nav-book:hover { background: var(--gold) !important; }
+
   .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: relative;
-    width: 26px;
-    height: 26px;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Toont de hamburger op mobiel */
   }
-
-  .ham-line {
-    width: 26px;
-    height: 1.5px;
-    background: var(--cream);
-    transition: .3s;
-    display: block;
-  }
-
-  .ham-close {
-    display: none;
-    position: absolute;
-    font-size: 1.3rem;
-    color: var(--cream);
-    line-height: 1;
-  }
-
-  .hamburger.open .ham-line { display: none; }
-  .hamburger.open .ham-close { display: block; }
+}
 
   /* ─── HERO ───────────────────────────────────────── */
   .hero {
